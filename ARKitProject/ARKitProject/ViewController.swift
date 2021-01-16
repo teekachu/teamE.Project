@@ -10,7 +10,7 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
+    
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -31,8 +31,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             fatalError("Couldn't load the cardAGAIN image!")
         }
         
-//        configuration.trackingImages = trackingImage
-
+        configuration.trackingImages = trackingImage
+        
         // Run the view's session
         sceneView.session.run(configuration)
     }
@@ -42,16 +42,34 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Pause the view's session
         sceneView.session.pause()
+        
     }
-
-    // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
+    
+    // Privates
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
+        guard let imageAnchor = anchor as? ARImageAnchor else {return nil}
+        
+        //        let resumeName = imageAnchor.referenceImage.name else {return nil}
+        //        guard let resume = resume
+        
+        /// create a plane for exact size of ref image
+        let ref = imageAnchor.referenceImage.physicalSize
+        let plane = SCNPlane(width: ref.width , height: ref.height)
+        
+        /// make plane transparent blue
+        plane.firstMaterial?.diffuse.contents = UIColor.blue.withAlphaComponent(0.5)
+        
+        /// wrap plane in node and rotate to face us
+        let planeNode = SCNNode(geometry: plane)
+        planeNode.eulerAngles.x = -.pi / 2
+        
+        // now wrap that in another node = send it back
         let node = SCNNode()
-     
+        node.addChildNode(planeNode)
         return node
     }
-*/
+    
+    // MARK: - ARSCNViewDelegate
+    
 }
