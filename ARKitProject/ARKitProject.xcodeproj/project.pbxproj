@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05B1679025B385F0006E82B2 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B1678F25B385F0006E82B2 /* CardDetailsView.swift */; };
 		A7F3D6A825B366A3000C1255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3D6A725B366A3000C1255 /* AppDelegate.swift */; };
 		A7F3D6AA25B366A3000C1255 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F3D6A925B366A3000C1255 /* art.scnassets */; };
 		A7F3D6AC25B366A3000C1255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3D6AB25B366A3000C1255 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05B1678F25B385F0006E82B2 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		A7F3D6A425B366A2000C1255 /* ARKitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F3D6A725B366A3000C1255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7F3D6A925B366A3000C1255 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05B1678E25B3851D006E82B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				05B1678F25B385F0006E82B2 /* CardDetailsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A7F3D69B25B366A2000C1255 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 				A7F3D6B025B366A4000C1255 /* Assets.xcassets */,
 				A7F3D6B225B366A4000C1255 /* LaunchScreen.storyboard */,
 				A7F3D6B525B366A4000C1255 /* Info.plist */,
+				05B1678E25B3851D006E82B2 /* Views */,
 			);
 			path = ARKitProject;
 			sourceTree = "<group>";
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7F3D6AC25B366A3000C1255 /* ViewController.swift in Sources */,
+				05B1679025B385F0006E82B2 /* CardDetailsView.swift in Sources */,
 				A7F3D6A825B366A3000C1255 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
