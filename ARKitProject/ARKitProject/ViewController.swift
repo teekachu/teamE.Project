@@ -31,7 +31,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             fatalError("Couldn't load the cardAGAIN image!")
         }
         
-        configuration.trackingImages = trackingImage
+//        configuration.trackingImages = trackingImage
 
         // Run the view's session
         sceneView.session.run(configuration)
