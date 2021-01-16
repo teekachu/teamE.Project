@@ -9,7 +9,19 @@ import SwiftUI
 
 struct CardDetailsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "person")
+                .frame(width: 50, height: 50)
+                .imageScale(.large)
+                .padding()
+                .background(Color.blue)
+                .clipShape(Circle())
+            VStack(alignment: .leading) {
+                Text("Person's Name")
+                Text("(123) 456-7890")
+                Text("email@gmail.com")
+            }
+        }
     }
 }
 
