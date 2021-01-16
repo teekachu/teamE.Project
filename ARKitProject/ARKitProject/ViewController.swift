@@ -24,7 +24,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         
         // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+        let configuration = ARImageTrackingConfiguration()
+        
+        // load the cardagain image
+        guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "cardAGAIN", bundle: nil) else {
+            fatalError("Couldn't load the cardAGAIN image!")
+        }
+        
+        configuration.trackingImages = trackingImage
 
         // Run the view's session
         sceneView.session.run(configuration)
