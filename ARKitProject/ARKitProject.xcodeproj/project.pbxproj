@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		05B1679025B385F0006E82B2 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B1678F25B385F0006E82B2 /* CardDetailsView.swift */; };
 		A7F3D6A825B366A3000C1255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3D6A725B366A3000C1255 /* AppDelegate.swift */; };
-		A7F3D6AA25B366A3000C1255 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F3D6A925B366A3000C1255 /* art.scnassets */; };
 		A7F3D6AC25B366A3000C1255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3D6AB25B366A3000C1255 /* ViewController.swift */; };
 		A7F3D6AF25B366A3000C1255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F3D6AD25B366A3000C1255 /* Main.storyboard */; };
 		A7F3D6B125B366A4000C1255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F3D6B025B366A4000C1255 /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 		05B1678F25B385F0006E82B2 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		A7F3D6A425B366A2000C1255 /* ARKitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F3D6A725B366A3000C1255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7F3D6A925B366A3000C1255 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		A7F3D6AB25B366A3000C1255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A7F3D6AE25B366A3000C1255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7F3D6B025B366A4000C1255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				A7F3D6A725B366A3000C1255 /* AppDelegate.swift */,
-				A7F3D6A925B366A3000C1255 /* art.scnassets */,
 				A7F3D6AB25B366A3000C1255 /* ViewController.swift */,
 				A7F3D6AD25B366A3000C1255 /* Main.storyboard */,
 				A7F3D6B025B366A4000C1255 /* Assets.xcassets */,
@@ -242,7 +239,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7F3D6AA25B366A3000C1255 /* art.scnassets in Resources */,
 				A7F3D6B425B366A4000C1255 /* LaunchScreen.storyboard in Resources */,
 				A7F3D6B125B366A4000C1255 /* Assets.xcassets in Resources */,
 				A7F3D6AF25B366A3000C1255 /* Main.storyboard in Resources */,
