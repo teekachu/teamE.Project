@@ -27,11 +27,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARImageTrackingConfiguration()
         
         // load the cardagain image
-        guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "cardAGAIN", bundle: nil) else {
-            fatalError("Couldn't load the cardAGAIN image!")
-        }
+//        guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "cardAGAIN", bundle: nil) else {
+//            fatalError("Couldn't load the cardAGAIN image!")
+//        }
         
-        configuration.trackingImages = trackingImage
+//        configuration.trackingImages = trackingImage
 
         // Run the view's session
         sceneView.session.run(configuration)
