@@ -27,7 +27,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let configuration = ARImageTrackingConfiguration()
         
         // load the cardagain image
-        guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "cardAGAIN", bundle: nil) else {
+        guard let trackingImage = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
             fatalError("Couldn't load the cardAGAIN image!")
         }
         
