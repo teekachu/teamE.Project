@@ -38,6 +38,7 @@ struct CardDetailsView: View {
                         .frame(width: 350, height: 350, alignment: .center)
                         .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                         .padding()
+                        .opacity(0)
                     
                     VStack(alignment: .leading) {
                         if occupation == "Student" {
