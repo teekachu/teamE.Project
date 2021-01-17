@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		05B1679025B385F0006E82B2 /* CardDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B1678F25B385F0006E82B2 /* CardDetailsView.swift */; };
 		A78688A025B3DA5A007E32A9 /* resumes.json in Resources */ = {isa = PBXBuildFile; fileRef = A786889F25B3DA5A007E32A9 /* resumes.json */; };
-		A78688AA25B3DB1F007E32A9 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78688A925B3DB1F007E32A9 /* Student.swift */; };
+		A78688AA25B3DB1F007E32A9 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78688A925B3DB1F007E32A9 /* Person.swift */; };
 		A7F3D6A825B366A3000C1255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3D6A725B366A3000C1255 /* AppDelegate.swift */; };
 		A7F3D6AC25B366A3000C1255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F3D6AB25B366A3000C1255 /* ViewController.swift */; };
 		A7F3D6AF25B366A3000C1255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7F3D6AD25B366A3000C1255 /* Main.storyboard */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		05B1678F25B385F0006E82B2 /* CardDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailsView.swift; sourceTree = "<group>"; };
 		A786889F25B3DA5A007E32A9 /* resumes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resumes.json; sourceTree = "<group>"; };
-		A78688A925B3DB1F007E32A9 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		A78688A925B3DB1F007E32A9 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A7F3D6A425B366A2000C1255 /* ARKitProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F3D6A725B366A3000C1255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7F3D6AB25B366A3000C1255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		A78688A525B3DB07007E32A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A78688A925B3DB1F007E32A9 /* Student.swift */,
+				A78688A925B3DB1F007E32A9 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				A7F3D6AC25B366A3000C1255 /* ViewController.swift in Sources */,
 				05B1679025B385F0006E82B2 /* CardDetailsView.swift in Sources */,
 				A7F3D6A825B366A3000C1255 /* AppDelegate.swift in Sources */,
-				A78688AA25B3DB1F007E32A9 /* Student.swift in Sources */,
+				A78688AA25B3DB1F007E32A9 /* Person.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

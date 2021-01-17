@@ -8,14 +8,14 @@
 import Foundation
 import UIKit
 
-struct Student: Codable {
-    var title: String
+struct Person: Codable {
+    var name: String
     var image: String
     var detail: detail
 }
 
 struct detail: Codable {
-    var schoolName: String
-    var number: String
+    var occupation: String
+    var phoneNumber: String
     var emailAddress: String
 }

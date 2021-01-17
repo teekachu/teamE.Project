@@ -1,9 +1,12 @@
 {
 	"Ting": {
 		"name": "The Coronation of Napoleon",
-		"photo": "Jacques-Louis David",
-		"student": "1807",
-		"url": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon"
+		"image": "Jacques-Louis David",
+		"detail": [{
+            "occupation": "1807",
+            "phoneNumber": "1807",
+            "emailAddress": "1807"
+        }]
 	},
 	"Milo": {
 		"title": "St. John the Baptist",
