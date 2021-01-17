@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+struct HStackView: View {
+    var image: String
+    var type: String
+    
+    var body: some View {
+        HStack {
+            Image(systemName: image)
+            Text(type)
+        }
+    }
+}
+
 struct CardDetailsView: View {
     let person: Person
     
@@ -45,12 +57,7 @@ struct CardDetailsView: View {
                             Text(person.detail.occupation)
                             
                             if let school = person.detail.school {
-                                HStack {
-                                    Image(systemName: "studentdesk")
-                                        .imageScale(.large)
-                                    Text(school)
-                                        .font(.largeTitle)
-                                }
+                                HStackView(image: "studentdesk", type: school)
                             }
                         } else {
                             HStack {
@@ -59,27 +66,11 @@ struct CardDetailsView: View {
                                 .fontWeight(.bold)
                             }
                             if let company = person.detail.company {
-                                HStack {
-                                    Image(systemName: "building.2")
-                                        .imageScale(.large)
-                                    Text(company)
-                                        .font(.largeTitle)
-                                }
+                                HStackView(image: "building.2", type: company)
                             }
                         }
-                        
-                        HStack {
-                            Image(systemName: "iphone")
-                                .imageScale(.large)
-                            Text(person.detail.phoneNumber)
-                                .font(.largeTitle)
-                        }
-                        HStack {
-                            Image(systemName: "envelope")
-                                .imageScale(.large)
-                            Text(person.detail.email)
-                                .font(.largeTitle)
-                        }
+                        HStackView(image: "iphone", type: person.detail.phoneNumber)
+                        HStackView(image: "envelope", type: person.detail.email)
                     }
                     .font(.system(size: 22))
                     .foregroundColor(.white)
