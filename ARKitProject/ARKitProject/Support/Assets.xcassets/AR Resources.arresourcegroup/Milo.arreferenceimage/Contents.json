@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Myat Thu Ko.png",
+      "filename" : "Frame 2-2.png",
       "idiom" : "universal"
     }
   ],
@@ -10,7 +10,7 @@
     "version" : 1
   },
   "properties" : {
-    "unit" : "centimeters",
-    "width" : 400
+    "unit" : "inches",
+    "width" : 4
   }
 }

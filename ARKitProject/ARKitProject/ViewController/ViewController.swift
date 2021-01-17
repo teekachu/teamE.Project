@@ -14,7 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
-    var people: [Person] = []
+    var people: [String: Person] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // load the JSON bundle
         let plsWork = Bundle.main.decode([String: Person].self, from: "resumes.json")
         for (key, value) in plsWork {
-            people.append(value)
+            people[key] = value
         }
         
         
@@ -67,12 +67,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         /// create a plane for exact size of ref image
         let ref = imageAnchor.referenceImage.physicalSize
-        let plane = SCNPlane(width: ref.width * 2.1, height: ref.height * 2.1)
+        let plane = SCNPlane(width: ref.width * 2.75, height: ref.height * 2.75)
         
         /// make plane transparent blue
         let rootView = assignCardData(imageName)
         let cardView = UIHostingController(rootView: rootView).view!
-        cardView.frame = CGRect(x: 0, y: -20, width: 1000, height: 1000)
+        cardView.frame = CGRect(x: 0, y: -20, width: 1200, height: 1200)
         cardView.backgroundColor = .clear
         cardView.isOpaque = false
         plane.firstMaterial?.diffuse.contents = cardView
@@ -87,23 +87,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         return node
     }
     
-    func assignCardData(_ name: String) -> CardDetailsView {
-        
-        var result: Person?
-        
-        for person in people {
-            if person.name == name {
-                result = person
-                break
-            }
-        }
-        
-        if let result = result {
+    func assignCardData(_ name: String) -> CardDetailsView? {
+        if let person = people[name] {
             // return CardDetailsView with the right values
-            return CardDetailsView()
+            let card = CardDetailsView(person: person)
+            return card
         } else {
-            // return the default implementation
-            return CardDetailsView()
+            return nil
         }
     }
     
