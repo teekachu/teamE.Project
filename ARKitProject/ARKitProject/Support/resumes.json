@@ -4,51 +4,51 @@
 		"name": "Ting Becker",
 		"imageName": "Jacques-Louis David",
         "website": "https://github.com/teekachu",
-		"detail": [{
+		"detail": {
             "occupation": "Self taught iOS developer",
             "school": "San Francisco State University",
             "company": "N/A",
             "phoneNumber": "925-886-9433",
             "email": "teeksbuildapps@outlook.com"
-        }]
+        }
 	},
     
     "Adrian": {
         "name": "Ting Becker",
         "imageName": "Jacques-Louis David",
         "website": "Jacques-Louis David",
-        "detail": [{
+        "detail": {
             "occupation": "Self taught iOS developer",
             "school": "Self taught iOS developer",
             "company": "Self taught iOS developer",
             "phoneNumber": "123-456-7890",
             "email": "teeksbuildapps@outlook.com"
-        }]
+        }
     },
     
     "Milo": {
         "name": "Ting Becker",
         "imageName": "Jacques-Louis David",
         "website": "Jacques-Louis David",
-        "detail": [{
+        "detail": {
             "occupation": "Self taught iOS developer",
             "school": "Self taught iOS developer",
             "company": "Self taught iOS developer",
             "phoneNumber": "123-456-7890",
             "email": "teeksbuildapps@outlook.com"
-        }]
+        }
     },
     
     "Tony": {
         "name": "Ting Becker",
         "imageName": "Jacques-Louis David",
         "website": "Jacques-Louis David",
-        "detail": [{
+        "detail": {
             "occupation": "Self taught iOS developer",
             "school": "Self taught iOS developer",
             "company": "Self taught iOS developer",
             "phoneNumber": "123-456-7890",
             "email": "teeksbuildapps@outlook.com"
-        }]
+        }
     }
 }
