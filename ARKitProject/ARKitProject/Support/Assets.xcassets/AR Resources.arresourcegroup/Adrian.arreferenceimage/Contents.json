@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Milo.png",
+      "filename" : "Adrian.png",
       "idiom" : "universal"
     }
   ],
@@ -10,7 +10,7 @@
     "version" : 1
   },
   "properties" : {
-    "unit" : "inches",
-    "width" : 4
+    "unit" : "centimeters",
+    "width" : 600
   }
 }
