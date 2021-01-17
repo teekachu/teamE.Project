@@ -62,6 +62,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let cardView = UIHostingController(rootView: CardDetailsView()).view!
         cardView.frame = CGRect(x: 0, y: 0, width: 800, height: 800)
         cardView.backgroundColor = .clear
+        cardView.isOpaque = false
         plane.firstMaterial?.diffuse.contents = cardView
         
         /// wrap plane in node and rotate to face us
