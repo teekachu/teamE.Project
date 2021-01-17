@@ -56,11 +56,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         /// create a plane for exact size of ref image
         let ref = imageAnchor.referenceImage.physicalSize
-        let plane = SCNPlane(width: ref.width * 2, height: ref.height * 2)
+        let plane = SCNPlane(width: ref.width * 2.1, height: ref.height * 2.1)
         
         /// make plane transparent blue
         let cardView = UIHostingController(rootView: CardDetailsView()).view!
-        cardView.frame = CGRect(x: 0, y: 0, width: 800, height: 800)
+        cardView.frame = CGRect(x: 0, y: -20, width: 1000, height: 1000)
         cardView.backgroundColor = .clear
         cardView.isOpaque = false
         plane.firstMaterial?.diffuse.contents = cardView

@@ -18,27 +18,24 @@ struct CardDetailsView: View {
     var website = "www.apple.com"
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(spacing: 0) {
             Text(name)
                 .font(.system(size: 70))
                 .bold()
                 .foregroundColor(.black)
-            
+                .frame(height: 100, alignment: .bottom)
             
             ZStack {
                 HStack {
                     Image(imageName)
                         .resizable()
-                        .frame(width: 150, height: 150, alignment: .center)
-                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        .clipShape(Circle())
                         .padding()
+                        .frame(width: 200, height: 200, alignment: .center)
                     
-                    Image(imageName)
-                        .resizable()
-                        .frame(width: 350, height: 350, alignment: .center)
-                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                        .padding()
-                        .opacity(0)
+                    Rectangle()
+                        .fill(Color.clear)
+                        .frame(width: 480, height: 480)
                     
                     VStack(alignment: .leading) {
                         if occupation == "Student" {
@@ -66,7 +63,9 @@ struct CardDetailsView: View {
                             Image(systemName: "envelope")
                             Text(email)
                         }
-                    }.font(.system(size: 22))
+                    }
+                    .font(.system(size: 22))
+                    .frame(width: 200)
                 }
             }.foregroundColor(.black)
             
@@ -76,13 +75,17 @@ struct CardDetailsView: View {
                 Link("Visit Apple",
                      destination: URL(string: website)!)
                     .font(.title)
-            }.foregroundColor(.red)
+            }
+            .foregroundColor(.red)
+            .padding()
+            .frame(height: 100, alignment: .top)
+
         }
     }
     
     struct CardDetailsView_Previews: PreviewProvider {
         static var previews: some View {
-            CardDetailsView().previewLayout(.fixed(width: 1500, height: 900))
+            CardDetailsView().previewLayout(.fixed(width: 1000, height: 1000))
         }
     }
 }
