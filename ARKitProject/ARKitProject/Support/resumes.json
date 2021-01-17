@@ -2,11 +2,10 @@
 {
 	"Ting": {
 		"name": "Ting Becker",
-		"imageName": "Jacques-Louis David",
+		"imageName": "tee",
         "website": "https://github.com/teekachu",
 		"detail": {
             "occupation": "Self taught iOS developer",
-            "school": "San Francisco State University",
             "phoneNumber": "925-886-9433",
             "email": "teeksbuildapps@outlook.com"
         }

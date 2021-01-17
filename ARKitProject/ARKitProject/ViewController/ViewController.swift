@@ -97,8 +97,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    // MARK: - ARSCNViewDelegate
-    
 }
 
 extension Bundle {
