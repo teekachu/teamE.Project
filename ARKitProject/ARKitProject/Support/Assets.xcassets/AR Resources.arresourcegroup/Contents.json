@@ -5,10 +5,19 @@
   },
   "resources" : [
     {
-      "filename" : "cardAGAIN.arreferenceimage"
+      "filename" : "adrian.arreferenceimage"
+    },
+    {
+      "filename" : "Frame 2.arreferenceimage"
+    },
+    {
+      "filename" : "Myat Thu Ko.arreferenceimage"
     },
     {
       "filename" : "tee.arreferenceimage"
+    },
+    {
+      "filename" : "tee2.arreferenceimage"
     }
   ]
 }
