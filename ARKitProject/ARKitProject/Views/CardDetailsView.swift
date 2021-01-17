@@ -19,11 +19,15 @@ struct CardDetailsView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Text(name)
-                .font(.custom("HoeflerText-BlackItalic", size: 70))
-                .bold()
-                .foregroundColor(.black)
+            LinearGradient(gradient: Gradient(colors: [.purple, .purple, .orange, .init(red: 141/255, green: 168/255, blue: 62/255)]), startPoint: .bottomLeading, endPoint: .topTrailing)
+                .mask(
+                    Text(name)
+                        .font(.custom("HoeflerText-BlackItalic", size: 70))
+                        .bold()
+                        .foregroundColor(.black)
+                )
                 .frame(height: 100, alignment: .bottom)
+
             
             Text(name)
                 .font(.custom("BodoniOrnamentsITCTT", size: 20))
@@ -89,8 +93,8 @@ struct CardDetailsView: View {
                 .foregroundColor(.white)
 
         }
-        .background(LinearGradient(gradient: Gradient(colors: [.purple, .purple, .orange, .init(red: 141/255, green: 168/255, blue: 62/255), .yellow, .white]), startPoint: .bottomLeading, endPoint: .topTrailing))
-        .cornerRadius(30)
+//        .background(LinearGradient(gradient: Gradient(colors: [.purple, .purple, .orange, .init(red: 141/255, green: 168/255, blue: 62/255), .yellow, .white]), startPoint: .bottomLeading, endPoint: .topTrailing))
+//        .cornerRadius(30)
 
     }
     
