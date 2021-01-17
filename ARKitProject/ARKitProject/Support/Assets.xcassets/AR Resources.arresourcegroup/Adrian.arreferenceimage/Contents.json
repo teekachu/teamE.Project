@@ -10,7 +10,7 @@
     "version" : 1
   },
   "properties" : {
-    "unit" : "centimeters",
-    "width" : 600
+    "unit" : "inches",
+    "width" : 4
   }
 }

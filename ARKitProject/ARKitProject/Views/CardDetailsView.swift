@@ -24,31 +24,33 @@ struct CardDetailsView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            LinearGradient(gradient: Gradient(colors: [.purple, .purple, .orange, .init(red: 141/255, green: 168/255, blue: 62/255)]), startPoint: .bottomLeading, endPoint: .topTrailing)
-                .mask(
+            HStack {
+                VStack {
                     Text(person.name)
-                        .font(.custom("HoeflerText-BlackItalic", size: 70))
+                        .font(.system(size: 80))
                         .bold()
-                        .foregroundColor(.black)
-                )
-                .frame(height: 100, alignment: .bottom)
-
-
-            Text(person.name)
-                .font(.custom("BodoniOrnamentsITCTT", size: 20))
+                        .padding(40)
+                }
+                
+                Spacer()
+            }
+            
+            VStack {
+                
+                Rectangle()
+                    .opacity(0.0)
+                    .frame(height: 30)
             
             ZStack {
                 HStack {
-                    Image(person.imageName)
+                    Image(systemName: person.imageName)
                         .resizable()
                         .clipShape(Circle())
                         .padding()
                         .frame(width: 200, height: 200)
                         .frame(width: 350, alignment: .trailing)
                     
-                    Rectangle()
-                        .fill(Color.clear)
-                        .frame(width: 480, height: 480)
+                    Spacer()
                     
                     VStack(alignment: .leading) {
                         if person.detail.occupation == "Student" {
@@ -60,6 +62,8 @@ struct CardDetailsView: View {
                         } else {
                             HStack {
                                 Text(person.detail.occupation)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
                             }
                             if let company = person.detail.company {
                                 HStackView(image: "building.2", type: company)
@@ -69,37 +73,58 @@ struct CardDetailsView: View {
                         HStackView(image: "envelope", type: person.detail.email)
                     }
                     .font(.system(size: 22))
-                    .frame(width: 350, alignment: .leading)
+                    .foregroundColor(.white)
+                    .frame(width: 450, alignment: .leading)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 25.0).opacity(0.4))
+                    .padding(.trailing, 10)
+                    //.padding(.trailing, 80)
                 }
             }.foregroundColor(.black)
             
             if let website = URL(string: person.website) {
                 HStack {
-                    Image(systemName: "link.circle.fill")
-                        .font(.largeTitle)
-                    Link("Visit Website",
-                         destination: website)
-                        .font(.title)
+                    Spacer()
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.blue)
+                        .frame(width: 480, height: 80, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .overlay(
+                            HStack {
+                                Image(systemName: "link.circle.fill")
+                                    .font(.largeTitle)
+                                Link("Visit Website",
+                                     destination: website)
+                                    .font(.title)
+                            }
+                            .foregroundColor(.white)
+                            .padding()
+                    )
+                        .padding(.trailing, 10)
                 }
-                .foregroundColor(.white)
-                .padding()
-                .frame(height: 100, alignment: .top)
+                
+            }
+                
+                Rectangle()
+                    .opacity(0.0)
+                    .frame(height: 30)
+                
             }
             
             
-            Text("© cardAgain 2021")
+            Text("© cardAGAIN 2021")
                 .font(.title)
                 .foregroundColor(.white)
+                .padding()
 
         }
-//        .background(LinearGradient(gradient: Gradient(colors: [.purple, .purple, .orange, .init(red: 141/255, green: 168/255, blue: 62/255), .yellow, .white]), startPoint: .bottomLeading, endPoint: .topTrailing))
-//        .cornerRadius(30)
+        .background(LinearGradient(gradient: Gradient(colors: [.purple, .purple, .orange, .yellow, .white]), startPoint: .bottomLeading, endPoint: .topTrailing))
+        .cornerRadius(30)
 
     }
     
-//    struct CardDetailsView_Previews: PreviewProvider {
-//        static var previews: some View {
-//            CardDetailsView().previewLayout(.fixed(width: 1000, height: 1000))
-//        }
-//    }
+    struct CardDetailsView_Previews: PreviewProvider {
+        static var previews: some View {
+            CardDetailsView(person: Person(name: "Adrian Eves", imageName: "star", website: "https://www.google.com", detail: Detail(occupation: "Software Engineer", company: "Apple", school: "Auburn", phoneNumber: "9999999", email: "test@test.com"))).previewLayout(.fixed(width: 1000, height: 1000))
+        }
+    }
 }
