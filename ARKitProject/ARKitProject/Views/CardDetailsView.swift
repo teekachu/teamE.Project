@@ -7,16 +7,20 @@
 
 import SwiftUI
 
+struct HStackView: View {
+    var image: String
+    var type: String
+    
+    var body: some View {
+        HStack {
+            Image(systemName: image)
+            Text(type)
+        }
+    }
+}
+
 struct CardDetailsView: View {
     let person: Person
-//    var imageName = "swift"
-//    var name = "Name"
-//    var phoneNumber = "(123) 456-7890"
-//    var email = "Email Address"
-//    var occupation = "Job Title"
-//    var school = "School"
-//    var company = "Company"
-//    var website = "https://www.apple.com"
     
     var body: some View {
         VStack(spacing: 0) {
@@ -51,31 +55,18 @@ struct CardDetailsView: View {
                             Text(person.detail.occupation)
                             
                             if let school = person.detail.school {
-                                HStack {
-                                    Image(systemName: "studentdesk")
-                                    Text(school)
-                                }
+                                HStackView(image: "studentdesk", type: school)
                             }
                         } else {
                             HStack {
                                 Text(person.detail.occupation)
                             }
                             if let company = person.detail.company {
-                                HStack {
-                                    Image(systemName: "building.2")
-                                    Text(company)
-                                }
+                                HStackView(image: "building.2", type: company)
                             }
                         }
-                        
-                        HStack {
-                            Image(systemName: "iphone")
-                            Text(person.detail.phoneNumber)
-                        }
-                        HStack {
-                            Image(systemName: "envelope")
-                            Text(person.detail.email)
-                        }
+                        HStackView(image: "iphone", type: person.detail.phoneNumber)
+                        HStackView(image: "envelope", type: person.detail.email)
                     }
                     .font(.system(size: 22))
                     .frame(width: 350, alignment: .leading)
