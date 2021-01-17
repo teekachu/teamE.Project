@@ -22,46 +22,52 @@ struct CardDetailsView: View {
             Text(name)
                 .font(.system(size: 70))
                 .bold()
+                .foregroundColor(.black)
             
             
-            HStack {
-                Image(imageName)
-                    .resizable()
-                    .frame(width: 150, height: 150)
-                
-                Image(imageName)
-                    .resizable()
-                    .frame(width: 300, height: 300, alignment: .center)
-                    .padding()
-                
-                VStack(alignment: .leading) {
-                    if occupation == "Student" {
-                        Text(occupation)
+            ZStack {
+                HStack {
+                    Image(imageName)
+                        .resizable()
+                        .frame(width: 150, height: 150, alignment: .center)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        .padding()
+                    
+                    Image(imageName)
+                        .resizable()
+                        .frame(width: 350, height: 350, alignment: .center)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        .padding()
+                    
+                    VStack(alignment: .leading) {
+                        if occupation == "Student" {
+                            Text(occupation)
+                            
+                            HStack {
+                                Image(systemName: "studentdesk")
+                                Text(school)
+                            }
+                        } else {
+                            HStack {
+                                Text(occupation)
+                            }
+                            HStack {
+                                Image(systemName: "building.2")
+                                Text(company)
+                            }
+                        }
                         
                         HStack {
-                            Image(systemName: "studentdesk")
-                            Text(school)
-                        }
-                    } else {
-                        HStack {
-                            Text(occupation)
+                            Image(systemName: "iphone")
+                            Text(phoneNumber)
                         }
                         HStack {
-                            Image(systemName: "building.2")
-                            Text(company)
+                            Image(systemName: "envelope")
+                            Text(email)
                         }
-                    }
-                    
-                    HStack {
-                        Image(systemName: "iphone")
-                        Text(phoneNumber)
-                    }
-                    HStack {
-                        Image(systemName: "envelope")
-                        Text(email)
-                    }
-                }.font(.system(size: 22))
-            }
+                    }.font(.system(size: 22))
+                }
+            }.foregroundColor(.black)
             
             HStack {
                 Image(systemName: "link.circle.fill")
