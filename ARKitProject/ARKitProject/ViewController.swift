@@ -8,6 +8,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import SwiftUI
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     
@@ -55,10 +56,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         /// create a plane for exact size of ref image
         let ref = imageAnchor.referenceImage.physicalSize
-        let plane = SCNPlane(width: ref.width , height: ref.height)
+        let plane = SCNPlane(width: ref.width * 2, height: ref.height * 2)
         
         /// make plane transparent blue
-        plane.firstMaterial?.diffuse.contents = UIColor.blue.withAlphaComponent(0.5)
+        let cardView = UIHostingController(rootView: CardDetailsView()).view!
+        cardView.frame = CGRect(x: 0, y: 0, width: 800, height: 800)
+        cardView.backgroundColor = .clear
+        plane.firstMaterial?.diffuse.contents = cardView
         
         /// wrap plane in node and rotate to face us
         let planeNode = SCNNode(geometry: plane)
