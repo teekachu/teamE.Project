@@ -1,29 +1,54 @@
+
 {
 	"Ting": {
-		"name": "The Coronation of Napoleon",
-		"image": "Jacques-Louis David",
+		"name": "Ting Becker",
+		"imageName": "Jacques-Louis David",
+        "website": "https://github.com/teekachu",
 		"detail": [{
-            "occupation": "1807",
-            "phoneNumber": "1807",
-            "emailAddress": "1807"
+            "occupation": "Self taught iOS developer",
+            "school": "San Francisco State University",
+            "company": "N/A",
+            "phoneNumber": "925-886-9433",
+            "email": "teeksbuildapps@outlook.com"
         }]
 	},
-	"Milo": {
-		"title": "St. John the Baptist",
-		"artist": "Leonardo da Vinci",
-		"year": "1516",
-		"url": "https://en.wikipedia.org/wiki/St._John_the_Baptist_(Leonardo)"
-	},
-	"Adrian": {
-		"title": "Portrait of Louis XIV",
-		"artist": "Hyacinthe Rigaud",
-		"year": "1701",
-		"url": "https://en.wikipedia.org/wiki/Portrait_of_Louis_XIV"
-	},
-	"Tony": {
-		"title": "Mona Lisa",
-		"artist": "Leonardo da Vinci",
-		"year": "1517",
-		"url": "https://en.wikipedia.org/wiki/Mona_Lisa"
-	}
+    
+    "Adrian": {
+        "name": "Ting Becker",
+        "imageName": "Jacques-Louis David",
+        "website": "Jacques-Louis David",
+        "detail": [{
+            "occupation": "Self taught iOS developer",
+            "school": "Self taught iOS developer",
+            "company": "Self taught iOS developer",
+            "phoneNumber": "123-456-7890",
+            "email": "teeksbuildapps@outlook.com"
+        }]
+    },
+    
+    "Milo": {
+        "name": "Ting Becker",
+        "imageName": "Jacques-Louis David",
+        "website": "Jacques-Louis David",
+        "detail": [{
+            "occupation": "Self taught iOS developer",
+            "school": "Self taught iOS developer",
+            "company": "Self taught iOS developer",
+            "phoneNumber": "123-456-7890",
+            "email": "teeksbuildapps@outlook.com"
+        }]
+    },
+    
+    "Tony": {
+        "name": "Ting Becker",
+        "imageName": "Jacques-Louis David",
+        "website": "Jacques-Louis David",
+        "detail": [{
+            "occupation": "Self taught iOS developer",
+            "school": "Self taught iOS developer",
+            "company": "Self taught iOS developer",
+            "phoneNumber": "123-456-7890",
+            "email": "teeksbuildapps@outlook.com"
+        }]
+    }
 }

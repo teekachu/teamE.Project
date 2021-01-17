@@ -10,12 +10,18 @@ import UIKit
 
 struct Person: Codable {
     var name: String
-    var image: String
-    var detail: detail
+    var imageName: String
+    var website: String
+    var detail: Detail
 }
 
-struct detail: Codable {
+struct Detail: Codable {
     var occupation: String
+    var company: String?
+    var school: String?
     var phoneNumber: String
-    var emailAddress: String
+    var email: String
+
 }
+
+
