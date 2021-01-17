@@ -43,12 +43,11 @@ struct CardDetailsView: View {
             
             ZStack {
                 HStack {
-                    Image(systemName: person.imageName)
+                    Image(person.imageName)
                         .resizable()
                         .clipShape(Circle())
-                        .padding()
-                        .frame(width: 200, height: 200)
-                        .frame(width: 350, alignment: .trailing)
+                        .frame(width: 300, height: 300)
+                        .padding(.leading, 100)
                     
                     Spacer()
                     
@@ -77,7 +76,7 @@ struct CardDetailsView: View {
                     .frame(width: 450, alignment: .leading)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 25.0).opacity(0.4))
-                    .padding(.trailing, 10)
+                    .padding(.trailing, 40)
                     //.padding(.trailing, 80)
                 }
             }.foregroundColor(.black)
@@ -99,7 +98,7 @@ struct CardDetailsView: View {
                             .foregroundColor(.white)
                             .padding()
                     )
-                        .padding(.trailing, 10)
+                        .padding(.trailing, 40)
                 }
                 
             }
