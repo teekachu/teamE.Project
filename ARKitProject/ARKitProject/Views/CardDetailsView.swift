@@ -15,7 +15,7 @@ struct CardDetailsView: View {
     var occupation = "Student"
     var school = "School"
     var company = "Company"
-    var website = "www.apple.com"
+    var website = "https://www.apple.com"
     
     var body: some View {
         VStack(spacing: 0) {
