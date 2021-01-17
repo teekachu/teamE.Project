@@ -40,15 +40,14 @@
     },
     
     "Tony": {
-        "name": "Ting Becker",
-        "imageName": "Jacques-Louis David",
-        "website": "Jacques-Louis David",
+        "name": "Myat Thu Ko",
+        "imageName": "myatthuko",
+        "website": "https://www.myatthuko.com",
         "detail": [{
-            "occupation": "Self taught iOS developer",
-            "school": "Self taught iOS developer",
-            "company": "Self taught iOS developer",
-            "phoneNumber": "123-456-7890",
-            "email": "teeksbuildapps@outlook.com"
+            "occupation": "Student",
+            "school": "City College of New York",
+            "phoneNumber": "347-707-3462",
+            "email": "nymyatthuko@gmail.com"
         }]
     }
 }
