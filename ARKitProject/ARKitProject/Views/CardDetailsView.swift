@@ -12,7 +12,7 @@ struct CardDetailsView: View {
     var name = "Name"
     var phoneNumber = "(123) 456-7890"
     var email = "Email Address"
-    var occupation = "Student"
+    var occupation = "Job Title"
     var school = "School"
     var company = "Company"
     var website = "https://www.apple.com"
@@ -20,10 +20,13 @@ struct CardDetailsView: View {
     var body: some View {
         VStack(spacing: 0) {
             Text(name)
-                .font(.system(size: 70))
+                .font(.custom("HoeflerText-BlackItalic", size: 70))
                 .bold()
                 .foregroundColor(.black)
                 .frame(height: 100, alignment: .bottom)
+            
+            Text(name)
+                .font(.custom("BodoniOrnamentsITCTT", size: 20))
             
             ZStack {
                 HStack {
@@ -76,11 +79,19 @@ struct CardDetailsView: View {
                      destination: URL(string: website)!)
                     .font(.title)
             }
-            .foregroundColor(.red)
+            .foregroundColor(.white)
             .padding()
             .frame(height: 100, alignment: .top)
+            
+            
+            Text("© cardAgain 2021")
+                .font(.title)
+                .foregroundColor(.white)
 
         }
+        .background(LinearGradient(gradient: Gradient(colors: [.purple, .purple, .orange, .init(red: 141/255, green: 168/255, blue: 62/255), .yellow, .white]), startPoint: .bottomLeading, endPoint: .topTrailing))
+        .cornerRadius(30)
+
     }
     
     struct CardDetailsView_Previews: PreviewProvider {
