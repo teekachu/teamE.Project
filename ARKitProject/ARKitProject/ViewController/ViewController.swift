@@ -51,8 +51,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else {return nil}
         
-        //        let resumeName = imageAnchor.referenceImage.name else {return nil}
-        //        guard let resume = resume
+//        let resumeName = imageAnchor.referenceImage.name else {return nil}
+//        guard let resume = resume
         
         /// create a plane for exact size of ref image
         let ref = imageAnchor.referenceImage.physicalSize

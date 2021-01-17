@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Frame 1-8.png",
+      "filename" : "Frame 1.png",
       "idiom" : "universal"
     }
   ],
@@ -10,6 +10,7 @@
     "version" : 1
   },
   "properties" : {
-    "width" : 4
+    "unit" : "centimeters",
+    "width" : 400
   }
 }

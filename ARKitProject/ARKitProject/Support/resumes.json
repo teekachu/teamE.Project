@@ -1,0 +1,26 @@
+{
+	"Ting": {
+		"name": "The Coronation of Napoleon",
+		"photo": "Jacques-Louis David",
+		"student": "1807",
+		"url": "https://en.wikipedia.org/wiki/The_Coronation_of_Napoleon"
+	},
+	"Milo": {
+		"title": "St. John the Baptist",
+		"artist": "Leonardo da Vinci",
+		"year": "1516",
+		"url": "https://en.wikipedia.org/wiki/St._John_the_Baptist_(Leonardo)"
+	},
+	"Adrian": {
+		"title": "Portrait of Louis XIV",
+		"artist": "Hyacinthe Rigaud",
+		"year": "1701",
+		"url": "https://en.wikipedia.org/wiki/Portrait_of_Louis_XIV"
+	},
+	"Tony": {
+		"title": "Mona Lisa",
+		"artist": "Leonardo da Vinci",
+		"year": "1517",
+		"url": "https://en.wikipedia.org/wiki/Mona_Lisa"
+	}
+}
