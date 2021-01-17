@@ -14,6 +14,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBOutlet var sceneView: ARSCNView!
     
+    var people: [Person] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +25,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // load the JSON bundle
+    
         
         // Create a session configuration
         let configuration = ARImageTrackingConfiguration()
@@ -54,12 +59,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 //        let resumeName = imageAnchor.referenceImage.name else {return nil}
 //        guard let resume = resume
         
+        guard let imageName = imageAnchor.referenceImage.name else { return nil }
+        
         /// create a plane for exact size of ref image
         let ref = imageAnchor.referenceImage.physicalSize
         let plane = SCNPlane(width: ref.width * 2.1, height: ref.height * 2.1)
         
         /// make plane transparent blue
-        let cardView = UIHostingController(rootView: CardDetailsView()).view!
+        let rootView = assignCardData(imageName)
+        let cardView = UIHostingController(rootView: rootView).view!
         cardView.frame = CGRect(x: 0, y: -20, width: 1000, height: 1000)
         cardView.backgroundColor = .clear
         cardView.isOpaque = false
@@ -73,6 +81,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = SCNNode()
         node.addChildNode(planeNode)
         return node
+    }
+    
+    func assignCardData(_ name: String) -> CardDetailsView {
+        
+        var result: Person?
+        
+        for person in people {
+            if person.name == name {
+                result = person
+                break
+            }
+        }
+        
+        if let result = result {
+            // return CardDetailsView with the right values
+            return CardDetailsView()
+        } else {
+            // return the default implementation
+            return CardDetailsView()
+        }
     }
     
     // MARK: - ARSCNViewDelegate
