@@ -86,7 +86,7 @@ struct CardDetailsView: View {
                 HStack {
                     Image(systemName: "link.circle.fill")
                         .font(.largeTitle)
-                    Link("Visit Apple",
+                    Link("Visit Website",
                          destination: website)
                         .font(.title)
                 }
